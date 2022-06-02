@@ -12,7 +12,6 @@ The paper is under review, we will release the PDF upon accepted.
 </center>
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-***
 ## Prerequisites
 
 ### environment
@@ -31,8 +30,6 @@ puts the two above datasets in ```.data/```, named as ```.DUTScls-44/``` and ```
 
 ### testing data
 link: https://pan.baidu.com/s/1PBzDP1Hnf3RIvpARmxn2yA. code: oipw
-
-***
 
 ## Training & Testing
 
