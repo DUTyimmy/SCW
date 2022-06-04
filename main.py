@@ -27,7 +27,7 @@ def main():
 
     # -------------------------------------------------- options --------------------------------------------------- #
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train_stage', type=str, default='1', choices=['1', '2'], help='training stage')
+    parser.add_argument('--train_stage', type=str, default='2', choices=['1', '2'], help='training stage')
     parser.add_argument('--param', type=str, default='train', choices=['train', 'infer'])
     parser.add_argument('--num_workers', type=int, default=12, help='the CPU workers number')
     parser.add_argument('--resize', type=int, default=256, help='resized size of images')

@@ -49,7 +49,7 @@ class TrainSal(object):
     def criterion(self, img, sal, lbl, delta):
 
         lbl_self = sal.clone().detach()
-        lbl_self = BinaryPamr(img, lbl_self, binary=0.5)
+        lbl_self = BinaryPamr(img, lbl_self, binary=0.4)
         loss1 = self.BCEloss(sal, lbl.unsqueeze(1)) * (1-delta)
         loss2 = self.BCEloss(sal, lbl_self) * delta
         return loss1, loss2

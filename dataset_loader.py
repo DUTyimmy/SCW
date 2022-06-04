@@ -36,7 +36,7 @@ class MySalTrainData(data.Dataset):
         self.resize = resize
         self.stage = stage
 
-        img_root = os.path.join(self.root, 'duts-train/image')
+        img_root = os.path.join(self.root, 'DUTS-train/image')
         lbl1_root = os.path.join(self.root, 'pseudo_labels/label' + str(self.stage))
         # gt_root = os.path.join(self.root, 'duts-train/mask')
         file_names = os.listdir(img_root)

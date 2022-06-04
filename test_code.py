@@ -1,7 +1,7 @@
 """
 Project: To be Critical: Self-Calibrated Weakly Supervised Learning for Salient Object Detection
 Author: Yimmy (Jian Wang)
-College: The OIP Lab, Dalian University of Technology
+College: The IIAU-OIP Lab, Dalian University of Technology
 """
 
 import os
@@ -21,7 +21,7 @@ from torch.utils.data import DataLoader
 def main():
     # -------------------------------------------------- options --------------------------------------------------- #
     parser = argparse.ArgumentParser()
-    parser.add_argument('--test_root', type=str, default=r'G:\Dataset\2DSOD\THUR-plane\image', help='path to test dataset')
+    parser.add_argument('--test_root', type=str, default='/home/oip/2DSOD/ECSSD/image', help='path to test dataset')
 
     parser.add_argument('--ckpt_root', type=str, default='snapshot/sal_stage_2.pth', help='path to checkpoint')
 
@@ -29,8 +29,8 @@ def main():
     parser.add_argument('--crf', type=bool, default=False, help='performing CRF or not')
     parser.add_argument('--salmap_root', type=str, default='sal_map', help='path to output saliency map')
     parser.add_argument('--salmap_crf_root', type=str, default='sal_map_crf', help='path to saliency map through crf')
-    parser.add_argument('--num_workers', type=int, default=1, help='the CPU workers number')
-    parser.add_argument('--batch', type=int, default=20, help='the CPU workers number')
+    parser.add_argument('--num_workers', type=int, default=12, help='the CPU workers number')
+    parser.add_argument('--batch', type=int, default=1, help='the CPU workers number')
     args = parser.parse_args()
     testdatainit(args.salmap_root, crf=args.crf)
 
